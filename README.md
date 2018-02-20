@@ -2,6 +2,10 @@
 
 Clone this repository.
 
+## Pre-requisite
+
+- [Node JS](nodejs.org)
+
 ## Installation
 
 - Install dependencies.
