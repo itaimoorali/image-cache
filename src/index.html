@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Image Cache</title>
+</head>
+<body ng-app="imageCacheApp">
+    <div ui-view></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.core.min.js"></script>
+    <script src="/assets/js/angular.min.js"></script>
+    <script src="/assets/js/angular-ui-router.min.js"></script>
+    <script src="/assets/js/angular-cache.min.js"></script>
+    <script src="/app/index.js"></script>
+    <script src="/app/common/services/movies.service.js"></script>
+    <script src="/app/common/directives/on-image-error.directive.js"></script>
+    <script src="/app/common/services/image.service.js"></script>
+    <script src="/app/movie-detail/movie-detail.controller.js"></script>
+    <script src="/app/movies-list/movies-list.controller.js"></script>
+
+</body>
+</html>

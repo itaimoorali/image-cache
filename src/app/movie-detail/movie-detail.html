@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row pb-2 pt-2">
+        <div class="col-md-12 text-left">
+            <button class="btn btn-md btn-primary" ui-sref="list">Home</button>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <h1>{{movie.headline || 'Loading...'}}</h1>
+        <p>Rating: {{movie.rating || 'Loading...'}} Year: {{movie.year || 'Loading...'}}</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12" ng-if="movie">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-block p-4">
+                            <h4 class="card-title text-center">Directors</h4>
+                            <p class="card-text" ng-repeat="d in movie.directors">{{::d.name}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-block p-4">
+                            <h4 class="card-title text-center">Synopsis</h4>
+                            <p class="card-text">{{::movie.synopsis}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-block p-4">
+                            <h4 class="card-title text-center">Cast</h4>
+                            <p class="card-text" ng-repeat="c in movie.cast">{{::c.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-if="movie && movie.cardImages.length">
+        <h3 class="pt-2 text-center">Card Images</h3>
+        <div class="col-md-12" ng-repeat="image in movie.cardImages">
+            <img ng-if="image.src" on-error-src="" ng-src="{{image.src}}" class="img-fluid img-thumbnail">
+            <p ng-if="!image.src">Loading</p>
+        </div>
+        <h3 class="pt-2 text-center">Key Art Images</h3>
+        <div class="col-md-12" ng-repeat="image in movie.keyArtImages">
+            <img ng-if="image.src" on-error-src="" ng-src="{{image.src}}" class="img-fluid img-thumbnail">
+            <p ng-if="!image.src">Loading</p>
+        </div>
+
+    </div>
+</div>

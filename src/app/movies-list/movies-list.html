@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Movies List</h1>
+    </div>
+    <div class="row">
+        <div ng-if="!movies.length" class="col-md-12">
+            <div class="text-center">
+                <h5>Loading</h5>
+            </div>
+        </div>
+        <div class="row" ng-if="!movies.length">
+            <div class="col-md-4" ng-repeat="m in [1,2,3]">
+                <div class="card">
+                    <div class="card-block p-4">
+                        <h4 class="card-title text-center">Loading...</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" ng-if="movies.length" ng-repeat="movie in movies">
+            <div class="card cursor-pointer" ui-sref="detail({movieId: movie.id})">
+                <div class="card-block p-4">
+                    <h4 class="card-title text-center">{{::movie.headline}}</h4>
+                    <p class="card-text">{{::movie.synopsis}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

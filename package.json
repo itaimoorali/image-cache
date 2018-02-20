@@ -1,0 +1,20 @@
+{
+  "name": "image-cache",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Taimoor Ali",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-cache": "^4.6.0",
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.2",
+    "lodash": "^4.17.5",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
