@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node ."
   },
+  "engines": {
+    "node": ">=6.11.2"
+  },
   "author": "Taimoor Ali",
   "license": "ISC",
   "dependencies": {
