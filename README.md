@@ -24,4 +24,4 @@ By default server is running on port 8000. You can change the port by providing 
 PORT='3000' npm start
 ```
 
-Open your browser and past this link `http://localhost:3000`
+Open your browser and paste this link `http://localhost:3000`
